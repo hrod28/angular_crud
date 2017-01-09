@@ -1,0 +1,38 @@
+<div class="page-header">
+  <h1>
+    {{$ctrl.message.message}}
+  </h1>
+</div>
+
+<div class="row">
+  <div class="col-md-8">
+
+    <form name="form" novalidate ng-submit="$ctrl.updateMessage()">
+      <div>
+        <label for="id">ID</label>
+        <input class="form-control" name="id" required ng-model="$ctrl.message.id">
+      </div>
+      <br>
+      <div>
+        <label for>Name</label>
+        <input class="form-control" name="name" required ng-model="$ctrl.message.name"></textarea>
+      </div>
+      <br>
+      <div>
+        <label>Message</label>
+        <input class="form-control" name="message" required ng-model="$ctrl.message.message">
+      </div>
+      <br>
+      <div class="form-group">
+        <button type="submit">
+          Update Record
+        </button>
+      </div>
+    </form>
+    <br>
+    <button type="button" ng-click="$ctrl.deleteMessage()">
+      Delete Record
+    </button>
+
+  </div>
+</div>

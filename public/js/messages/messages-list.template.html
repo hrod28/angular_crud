@@ -1,0 +1,16 @@
+<h1>Create a message</h1>
+<form ng-submit="$ctrl.createMessage()">
+  <label for="name"></label>
+  <input ng-model="$ctrl.message.name" type="text" name="name" placeholder="Enter your name">
+  <label for="message"></label>
+  <input ng-model="$ctrl.message.message" type="text" name="message" placeholder="Enter your message">
+  <button id="submitButton" type="button" name="button" ng-click="$ctrl.createMessage()">SUBMIT</button>
+</form>
+<hr>
+<h1>Messages</h1>
+<main id="messageContainer" ng-repeat="message in $ctrl.messages">
+  <div>
+    <h3>{{message.name}}</h3>
+    <a ui-sref="message-detail({id: message.id})">{{message.message}}</a>
+  </div>
+</main>

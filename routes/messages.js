@@ -11,7 +11,10 @@ router.get('/', (req, res, next) => {
     .select('id', 'name', 'message')
     .orderBy('id', 'desc')
     .then((results)=>{
-      res.send(results);
+      res.json(results);
+    })
+    .catch((err)=>{
+      res.send(err)
     })
 });
 
@@ -20,7 +23,10 @@ router.get('/:id', (req,res,next) => {
     .select('id', 'name', 'message')
     .where({id: req.params.id})
     .then((results) => {
-      res.send(results[0]);
+      res.json(results[0]);
+    })
+    .catch((err)=>{
+      res.send(err)
     })
 });
 
@@ -29,9 +35,13 @@ router.post('/', (req,res,next) => {
     .insert({
       name: req.body.name,
       message: req.body.message
-    }, ['name', 'message'])
+    }, ['id', 'name', 'message'])
     .then((result) => {
-      res.send(newMessage);
+      console.log("RESULT", result[0]);
+      res.send(result[0]);
+    })
+    .catch((err)=>{
+      res.send(err)
     })
 })
 
@@ -43,8 +53,10 @@ router.patch('/:id', (req,res,next) => {
     }, ['id', 'name', 'message'])
     .where({id: req.params.id})
     .then((result) => {
-      console.log("RESULT: ", result);
       res.send(result[0]);
+    })
+    .catch((err)=>{
+      res.send(err)
     })
 })
 
