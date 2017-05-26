@@ -1,6 +1,7 @@
 (function() {
   'use strict'
 
+
   angular.module('app')
     .component('messageDetail', {
       templateUrl: '/js/messages/message-detail.template.html',
@@ -16,25 +17,32 @@
     vm.deleteMessage = deleteMessage
 
     function onInit() {
-      $http.get(`/messages/${$stateParams.id}`)
+      console.log('get request line 20')
+      $http.get(`http://cap-backend.herokuapp.com/api/brewers/${$stateParams.id}`)
         .then(response => {
           vm.message = response.data
+          console.log(response.data);
         })
+      
     }
 
     function updateMessage() {
-      $http.patch(`/messages/${$stateParams.id}`, vm.message)
+      $http.patch(`http://cap-backend.herokuapp.com/api/brewers/${$stateParams.id}`, vm.message)
         .then(response => {
             $state.go('home')
         })
     }
 
     function deleteMessage() {
-      $http.delete(`/messages/${$stateParams.id}`)
-        .then(response => {
-            $state.go('home')
-        })
+      $http.delete(`http://cap-backend.herokuapp.com/api/brewers/${$stateParams.id}`)
+      .then(response => {
+        $state.go('home')
+      })
     }
+
+
+
+
   }
 
 }());

@@ -1,0 +1,74 @@
+<h1>Create record for Auction Table</h1>
+<form ng-submit="$ctrl.createMessage()">
+<h4>  <label for="name">name</label> <h4>
+
+  <input ng-model="$ctrl.message.name" type="text" name="name" placeholder="Enter brewer's name(s)">
+  <br>
+  <br>
+  <label for="name">brewery</label>
+  <br>
+  <br>
+  <input ng-model="$ctrl.message.brewery" type="text" name="brewery" placeholder="Enter brewery name">
+  <br>
+  <br>
+  <label for="name">URL of brewery logo</label>
+  <br>
+  <br>
+  <input ng-model="$ctrl.message.brewery_logo " type="text" name="brewery_logo " placeholder="Enter photo url">
+  <br>
+  <br>
+  <label for="name">name of beverage</label>
+  <br>
+  <br>
+  <input ng-model="$ctrl.message.featured_drink" type="text" name="featured_drink" placeholder="Enter beverage name">
+  <br>
+  <br>
+  <label for="name">description of beverage</label>
+  <br>
+  <br>
+  <input ng-model="$ctrl.message.description" type="text" name="description" placeholder="discription of beverage">
+  <br>
+  <br>
+  <label for="message">name of serving location</label>
+  <br>
+  <br>
+  <input ng-model="$ctrl.message.serving_location" type="text" name="serving_location" placeholder="Enter serving location">
+  <br>
+  <br>
+  <label for="name">URL of photo of drink</label>
+  <br>
+  <br>
+  <input ng-model="$ctrl.message.photo_url" type="text" name="photo_url" placeholder="photo url">
+  <br>
+  <br>
+  <label for="name">URL of business website</label>
+  <br>
+  <br>
+  <input ng-model="$ctrl.message.brewery_url" type="text" name="brewery_url" placeholder="brewery_url">
+  <br>
+  <br>
+  <button id="submitButton" type="button" name="button" ng-click="$ctrl.createMessage()">SUBMIT</button>
+</form>
+<hr>
+<hr>
+<h1>Update or delete records of Brewer's Table</h1>
+<main id="messageContainer" ng-repeat="message in $ctrl.messages">
+  <div>
+    <h3>{{message.name}}</h3>
+    <a ui-sref="message-detail({id: message.id})">{{message.brewery}}</a>
+    <a ui-sref="message-detail({id: message.id})">{{message.brewery}}</a>
+    <br>
+    <a ui-sref="message-detail({id: message.id})">{{message.brewery_logo}}</a>
+    <br>
+    <a ui-sref="message-detail({id: message.id})">{{message.featured_drink}}</a>
+    <br>
+    <a ui-sref="message-detail({id: message.id})">{{message.description}}</a>
+    <br>
+    <a ui-sref="message-detail({id: message.id})">{{message.serving_location}}</a>
+    <br>
+    <a ui-sref="message-detail({id: message.id})">{{message.photo_url}}</a>
+    <br>
+    <a ui-sref="message-detail({id: message.id})">{{message.brewery_url}}</a>
+
+  </div>
+</main>

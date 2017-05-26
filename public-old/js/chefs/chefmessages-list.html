@@ -1,0 +1,71 @@
+<h1>Create record for Chefs Table</h1>
+<form ng-submit="$ctrl.createChefMessage()">
+<h4>  <label for="name">name</label> <h4>
+
+  <input ng-model="$ctrl.chefmessage.name" type="text" name="name" placeholder="Enter Chefs's name(s)">
+  <br>
+  <br>
+  <label for="name">restaurant</label>
+  <br>
+  <br>
+  <input ng-model="$ctrl.chefmessage.restaurant" type="text" name="restaurant" placeholder="Enter restaurant name">
+  <br>
+  <br>
+  <label for="name">URL of restaurant logo</label>
+  <br>
+  <br>
+  <input ng-model="$ctrl.chefmessage.restaurant_logo " type="text" name="restaurant_logo " placeholder="Enter photo url">
+  <br>
+  <br>
+  <label for="name">name of beverage</label>
+  <br>
+  <br>
+  <input ng-model="$ctrl.chefmessage.paired_with" type="text" name="paired_with" placeholder="Enter beverage name">
+  <br>
+  <br>
+  <label for="name">URL of beverage company logo</label>
+  <br>
+  <br>
+  <input ng-model="$ctrl.chefmessage.paired_logo" type="text" name="paired_logo" placeholder="URL of logo">
+  <br>
+  <br>
+  <label for="message">name of serving location</label>
+  <br>
+  <br>
+  <input ng-model="$ctrl.chefmessage.serving_location" type="text" name="serving_location" placeholder="Enter serving location">
+  <br>
+  <br>
+  <label for="name">URL of photo of chef</label>
+  <br>
+  <br>
+  <input ng-model="$ctrl.chefmessage.photo_url" type="text" name="photo_url" placeholder="photo url">
+  <br>
+  <br>
+  <label for="name">google maps serving location url</label>
+  <br>
+  <br>
+  <input ng-model="$ctrl.chefmessage.restaurant_url" type="text" name="restaurant_url" placeholder="restaurant_url">
+  <br>
+  <br>
+  <button id="submitButton" type="button" name="button" ng-click="$ctrl.createChefMessage()">SUBMIT</button>
+</form>
+<hr>
+<hr>
+
+<h1>Update or delete records of Chef's Table</h1>
+<main id="chefmessageContainer" ng-repeat="chefmessage in $ctrl.chefmessages">
+  <div>
+    <h3>{{chefmessage.name}}</h3>
+    <a ui-sref="chefmessage-detail({id: chefmessage.id})">restaurant:  {{chefmessage.restaurant}}</a>
+    <br>
+    <a ui-sref="chefmessage-detail({id: chefmessage.id})">restaurant_logo:  {{chefmessage.restaurant_logo}}</a>
+    <br>
+    <a ui-sref="chefmessage-detail({id: chefmessage.id})">paired_with:  {{chefmessage.paired_with}}</a>
+    <br>
+    <a ui-sref="chefmessage-detail({id: chefmessage.id})">paired_logo:  {{chefmessage.paired_logo}}</a>
+    <br>
+    <a ui-sref="chefmessage-detail({id: chefmessage.id})">serving_location:  {{chefmessage.serving_location}}</a>
+    <br>
+    <a ui-sref="chefmessage-detail({id: chefmessage.id})">photo_url:  {{chefmessage.photo_url}}</a>
+    <br>
+    <a ui-sref="chefmessage-detail({id: chefmessage.id})">restaurant_url:  {{chefmessage.restaurant_url}}</a>

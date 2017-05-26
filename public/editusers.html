@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <script
+  src="https://code.jquery.com/jquery-3.1.1.min.js"
+  integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
+  crossorigin="anonymous"></script>
+  <script type="text/html" src="schedule.html"></script>
+  <script type="text/html" src="brewers.html"></script>
+  <script type="text/html" src="dishes.html"></script>
+  <script type="text/html" src="map.html"></script>
+  <script type="text/html" src="auction.html"></script>
+  <script type="text/html" src="thanks.html"></script>
+  <script type="text/html" src="users.html"></script>
+  <script type="text/html" src="chefs.html"></script>
+  <script type="text/html" src="index.html"></script>
+  <script type="text/javascript" src="js/users.js"></script>
+  <script type="text/javascript" src="js/editusers.js"></script>
+</head>
+<body>
+
+  <a href="/brewers.html">brewers<a/> |||||
+  <a href="/schedule.html">schedule<a/> |||||
+  <a href="/map.html">map<a/> |||||
+  <a href="/auction.html">auction<a/> |||||
+  <a href="/thanks.html">thanks<a/> |||||
+  <a href="/users.html">users<a/> |||||
+  <a href="/dishes.html">dishes<a/> |||||
+  <a href="/chefs.html">chefs<a/>
+
+
+  <h1>Edit, Delete users records</h1>
+  <form action="POST">
+    <label for="id">ID</label>
+    <input id="idInput" type="text" name="id">
+    <br>
+    <br>
+    <label for="first_name">first_name</label>
+    <br>
+    <input id="first_name" type="text" name="first_name">
+    <br>
+    <br>
+    <!-- (actually reastaurant) -->
+    <label for="last_name">last_name</label>
+    <br>
+    <input id="last_name" type="text" name="last_name">
+    <br>
+    <br>
+    <label for="username">username</label>
+    <br>
+    <input id="username" type="text" name="username">
+    <br>
+
+    <br>
+    <label for="email">email/label</label>
+    <br>
+    <input id="email" type="text" name="email">
+    <br>
+    <br>
+    <label for="visited_all">visited_all</label>
+    <br>
+    <input id="visited_all" type="text" name="visited_all">
+    <br>
+    <br>
+    <label for="vote1">vote1</label>
+    <br>
+    <input id="vote1" type="text" name="vote1">
+    <br>
+    <br>
+    <label for="vote2">vote2</label>
+    <br>
+
+    <br>
+    <br>
+    <button id="editButton" type="button" name="button">EDIT</button>
+    <br>
+    <br>
+    <button id="deleteButton" type="button" name="button">DELETE</button>
+  </form>
+  <hr>
+</body>
+</html>

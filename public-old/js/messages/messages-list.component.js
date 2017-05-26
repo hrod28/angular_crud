@@ -1,5 +1,5 @@
 (function() {
-  'use strict'
+  'use strict';
 
   angular.module('app')
     .component('messagesList', {
@@ -8,27 +8,29 @@
       },
       templateUrl: '/js/messages/messages-list.template.html',
       controller: controller
-    })
+    });
 
-  controller.$inject = ['$http']
+  controller.$inject = ['$http'];
   function controller($http) {
     const vm = this
 
-    vm.$onInit = onInit
-    vm.createMessage = createMessage
+
+    vm.$onInit = onInit;
+    vm.createMessage = createMessage;
+
 
     function onInit() {
-      $http.get('/messages')
-        .then(response => vm.messages = response.data)
+      $http.get('http://cap-backend.herokuapp.com/api/brewers')
+        .then(response => vm.messages = response.data);
     }
 
     function createMessage() {
-      $http.post('/messages', vm.message)
+      $http.post('http://cap-backend.herokuapp.com/api/brewers', vm.message)
         .then(response => {
           console.log("response", response.data);
-          vm.messages.push(response.data)
-          delete vm.message
-        })
+          vm.messages.push(response.data);
+          delete vm.message;
+        });
     }
 
   }

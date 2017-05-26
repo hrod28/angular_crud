@@ -7,7 +7,6 @@
   src="https://code.jquery.com/jquery-3.1.1.min.js"
   integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
   crossorigin="anonymous"></script>
-  <script type="text/javascript" src="js/index.js"></script>
   <script type="text/html" src="schedule.html"></script>
   <script type="text/html" src="brewers.html"></script>
   <script type="text/html" src="dishes.html"></script>
@@ -19,8 +18,6 @@
   <script type="text/html" src="index.html"></script>
   <script type="text/javascript" src="js/brewers.js"></script>
   <script type="text/javascript" src="js/editbrewers.js"></script>
-  <script type="text/javascript" src="js/messages.js"></script>
-  <script type="text/javascript" src="js/index.js"></script>
 </head>
 <body>
 
@@ -32,62 +29,64 @@
   <a href="/users.html">users<a/> |||||
   <a href="/dishes.html">dishes<a/> |||||
   <a href="/chefs.html">chefs<a/>
-  <h1>Create a chef record</h1>
-  <form action="/">
+
+
+  <h1>Edit, Delete brewer records</h1>
+  <form action="POST">
+    <label for="id">ID</label>
+    <input id="idInput" type="text" name="id">
+    <br>
+    <br>
     <label for="name">name</label>
     <br>
-    <input id="nameInput" type="text" name="name">
+    <input id="name" type="text" name="name">
     <br>
     <br>
     <!-- (actually reastaurant) -->
-    <label for="message">restaurant</label>
+    <label for="brewery">brewery</label>
     <br>
-    <input id="messageInput" type="text" name="message">
-    <br>
-    <br>
-    <label for="restaurant_logo">URL of logo photo</label>
-    <br>
-    <input id="restaurant_logo" type="text" name="restaurant_logo">
+    <input id="brewery" type="text" name="brewery">
     <br>
     <br>
-    <label for="paired_with">name of pairing</label>
+    <label for="brewery_logo">brewery logo</label>
     <br>
-    <input id="paired_with" type="text" name="paired_with">
-    <br>
-    <br>
-    <label for="paired_logo">URL of photo of pairing logo</label>
-    <br>
-    <input id="paired_logo" type="text" name="paired_logo">
+    <input id="brewery_logo" type="text" name="brewery_logo">
     <br>
     <br>
-    <label for="serving_location">serving location</label>
+    <label for="featured_drink">featured_drink</label>
+    <br>
+    <input id="featured_drink" type="text" name="featured_drink">
+    <br>
+    <br>
+    <label for="description">description of beverage</label>
+    <br>
+    <input id="description" type="text" name="description">
+    <br>
+    <br>
+    <label for="serving_location">serving_location</label>
     <br>
     <input id="serving_location" type="text" name="serving_location">
     <br>
     <br>
-    <label for="photo_url">URL of photo of chef</label>
+    <br>
+    <label for="photo_url">URL of photo of drink or brewer</label>
     <br>
     <input id="photo_url" type="text" name="photo_url">
     <br>
     <br>
-    <label for="restaurant_url">URL google maps web address for serving location</label>
+    <label for="brewery_url">URl of serving location</label>
     <br>
-    <input id="restaurant_url" type="text" name="restaurant_url">
+    <input id="brewery_url" type="text" name="brewery_url">
     <br>
+    <br>
+
     <br>
     <br>
     <button id="editButton" type="button" name="button">EDIT</button>
     <br>
     <br>
     <button id="deleteButton" type="button" name="button">DELETE</button>
-
-    <br>
-    <button id="submitButton" type="button" name="button">SUBMIT</button>
   </form>
   <hr>
-  <h1>Add, Edit, or Delete Records from Chef Challenge database, just click on a link</h1>
-  <main id="messageContainer">
-
-  </main>
 </body>
 </html>

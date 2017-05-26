@@ -1,0 +1,70 @@
+<div class="page-header">
+  <h1>
+    {{$ctrl.chefmessage.chefmessage}}
+  </h1>
+</div>
+<!-- new record update for chef -->
+
+<h4> Chef record edit: <h4>
+
+<div class="row">
+  <div class="col-md-8">
+
+    <form name="chefform" novalidate ng-submit="$ctrl.updateChefMessage()">
+      <div>
+        <label for="id">ID</label>
+        <input class="form-control" name="id" required ng-model="$ctrl.chefmessage.id">
+      </div>
+      <br>
+      <div>
+        <label for>Name</label>
+        <input class="form-control" name="name" required ng-model="$ctrl.chefmessage.name"></textarea>
+      </div>
+      <br>
+      <div>
+        <label>restaurant</label>
+        <input class="form-control" name="restaurant" required ng-model="$ctrl.chefmessage.restaurant">
+      </div>
+      <br>
+      <div>
+        <label>_logo</label>
+        <input class="form-control" name="restaurant_logo" required ng-model="$ctrl.chefmessage.restaurant_logo">
+      </div>
+      <br>
+      <div>
+        <label>paired with:</label>
+        <input class="form-control" name="paired_with" required ng-model="$ctrl.chefmessage.paired_with">
+      </div>
+      <br>
+      <div>
+        <label>URL of pairing logo</label>
+        <input class="form-control" name="paired_logo" required ng-model="$ctrl.chefmessage.paired_logo">
+      </div>
+      <br>
+      <div>
+        <label>serving_location</label>
+        <input class="form-control" name="serving_location" required ng-model="$ctrl.chefmessage.serving_location">
+      </div>
+      <br>
+      <div>
+        <label>photo_url</label>
+        <input class="form-control" name="photo_url" required ng-model="$ctrl.chefmessage.photo_url">
+      </div>
+      <br>
+      <div>
+        <label>brewery_url</label>
+        <input class="form-control" name="restaurant_url" required ng-model="$ctrl.chefmessage.brewery_url">
+      </div>
+      <br>
+      <div class="form-group">
+        <button type="submit">
+          Update Record
+        </button>
+      </div>
+    </form>
+    <br>
+    <button type="button" ng-click="$ctrl.deleteChefMessage()">
+      Delete Record
+    </button>
+
+  </div>

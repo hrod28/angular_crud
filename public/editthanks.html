@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <script
+  src="https://code.jquery.com/jquery-3.1.1.min.js"
+  integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
+  crossorigin="anonymous"></script>
+  <script type="text/html" src="schedule.html"></script>
+  <script type="text/html" src="brewers.html"></script>
+  <script type="text/html" src="dishes.html"></script>
+  <script type="text/html" src="map.html"></script>
+  <script type="text/html" src="auction.html"></script>
+  <script type="text/html" src="thanks.html"></script>
+  <script type="text/html" src="users.html"></script>
+  <script type="text/html" src="chefs.html"></script>
+  <script type="text/html" src="index.html"></script>
+  <script type="text/javascript" src="js/thanks.js"></script>
+  <script type="text/javascript" src="js/editthanks.js"></script>
+</head>
+<body>
+
+  <a href="/brewers.html">brewers<a/> |||||
+  <a href="/schedule.html">schedule<a/> |||||
+  <a href="/map.html">map<a/> |||||
+  <a href="/auction.html">auction<a/> |||||
+  <a href="/thanks.html">thanks<a/> |||||
+  <a href="/users.html">users<a/> |||||
+  <a href="/dishes.html">dishes<a/> |||||
+  <a href="/chefs.html">chefs<a/>
+
+
+  <h1>Edit, Delete Dish records</h1>
+  <form action="POST">
+    <label for="id">ID</label>
+    <input id="idInput" type="text" name="id">
+    <br>
+    <br>
+    <label for="thanks_name">Name of person or business</label>
+    <br>
+    <input id="thanks_name" type="text" name="thanks_name">
+    <br>
+    <br>
+    <!-- (actually reastaurant) -->
+    <label for="description">description</label>
+    <br>
+    <input id="description" type="text" name="description">
+    <br>
+    <br>
+    <label for="photo_url">photo_url</label>
+    <br>
+    <input id="photo_url" type="text" name="photo_url">
+    <br>
+    <br>
+    <label for="business_link">URL to business website</label>
+    <br>
+    <input id="business_link" type="text" name="business_link">
+    <br>
+    <br>
+    <br>
+    <button id="editButton" type="button" name="button">EDIT</button>
+    <br>
+    <br>
+    <button id="deleteButton" type="button" name="button">DELETE</button>
+  </form>
+  <hr>
+</body>
+</html>

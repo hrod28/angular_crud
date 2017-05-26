@@ -7,9 +7,9 @@
   src="https://code.jquery.com/jquery-3.1.1.min.js"
   integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
   crossorigin="anonymous"></script>
-  <script type="text/javascript" src="js/index.js"></script>
   <script type="text/html" src="schedule.html"></script>
   <script type="text/html" src="brewers.html"></script>
+  <script type="text/html" src="message.html"></script>
   <script type="text/html" src="dishes.html"></script>
   <script type="text/html" src="map.html"></script>
   <script type="text/html" src="auction.html"></script>
@@ -17,14 +17,16 @@
   <script type="text/html" src="users.html"></script>
   <script type="text/html" src="chefs.html"></script>
   <script type="text/html" src="index.html"></script>
+  <script type="text/javascript" src="js/index.js"></script>
+  <script type="text/javascript" src="js/messages.js"></script>
   <script type="text/javascript" src="js/brewers.js"></script>
   <script type="text/javascript" src="js/editbrewers.js"></script>
-  <script type="text/javascript" src="js/messages.js"></script>
+  <script type="text/javascript" src="js/message.js"></script>
   <script type="text/javascript" src="js/index.js"></script>
 </head>
 <body>
 
-  <a href="/brewers.html">brewers<a/> |||||
+  <a href="/dishes.html">brewers<a/> |||||
   <a href="/schedule.html">schedule<a/> |||||
   <a href="/map.html">map<a/> |||||
   <a href="/auction.html">auction<a/> |||||
@@ -32,8 +34,12 @@
   <a href="/users.html">users<a/> |||||
   <a href="/dishes.html">dishes<a/> |||||
   <a href="/chefs.html">chefs<a/>
-  <h1>Create a chef record</h1>
-  <form action="/">
+  <h1>Edit, Delete Chef records</h1>
+  <form action="POST">
+    <label for="id">ID</label>
+    <input id="idInput" type="text" name="id">
+    <br>
+    <br>
     <label for="name">name</label>
     <br>
     <input id="nameInput" type="text" name="name">
@@ -80,14 +86,7 @@
     <br>
     <br>
     <button id="deleteButton" type="button" name="button">DELETE</button>
-
-    <br>
-    <button id="submitButton" type="button" name="button">SUBMIT</button>
   </form>
   <hr>
-  <h1>Add, Edit, or Delete Records from Chef Challenge database, just click on a link</h1>
-  <main id="messageContainer">
-
-  </main>
 </body>
 </html>
