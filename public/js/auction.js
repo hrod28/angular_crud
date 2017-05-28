@@ -11,7 +11,7 @@ $(document).ready(() => {
     var options = {
       contentType: 'application/json',
       type: 'POST',
-      url: 'http://localhost:3000/api/posts',
+      url: 'http://cap-backend.herokuapp.com/api/posts',
       data: JSON.stringify({id, description, title, picture_url}),
     }
 
@@ -25,7 +25,7 @@ $(document).ready(() => {
       })
   });
 
-  $.getJSON('http://localhost:3000/api/posts')
+  $.getJSON('http://cap-backend.herokuapp.com/api/posts')
     .done((results) => {
       var $container = $('#auctionContainer');
       console.log("RESULTS: ", results);

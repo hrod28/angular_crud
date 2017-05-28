@@ -24,7 +24,7 @@ $(document).ready(() => {
       })
   });
 
-  $.getJSON('http://localhost:3000/api/comments')
+  $.getJSON('http://cap-backend.herokuapp.com/api/comments')
     .done((results) => {
       var $container = $('#scheduleContainer');
       console.log("RESULTS: thisone", results);

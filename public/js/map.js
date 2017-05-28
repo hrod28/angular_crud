@@ -9,7 +9,7 @@ $(document).ready(() => {
     var options = {
       contentType: 'application/json',
       type: 'POST',
-      url: 'http://localhost:3000/api/votes',
+      url: 'http://cap-backend.herokuapp.com/api/votes',
       data: JSON.stringify({id, map_photo})
     }
 
@@ -23,7 +23,7 @@ $(document).ready(() => {
       })
   });
 
-  $.getJSON('http://localhost:3000/api/votes')
+  $.getJSON('http://cap-backend.herokuapp.com/api/votes')
     .done((results) => {
       var $container = $('#mapContainer');
       console.log("RESULTS: ", results);

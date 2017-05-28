@@ -3,8 +3,7 @@ $(document).ready(() => {
    console.log("window.location.search with slice: ", window.location.search.slice(4));
    console.log("here");
   $.getJSON('http://cap-backend.herokuapp.com/api/chefs/' + window.location.search.slice(4))
-  .done((results) => {
-    console.log(results);
+    .done((results) => {
     // var result = results[0];
     $('#id').attr({value: results.id});
     $('#nameInput').attr({value: results.name});
@@ -20,6 +19,7 @@ $(document).ready(() => {
   .fail(() => {
     $('#messageContainer').text("Could not get messages");
   })
+  console.log(results.restaurant_logo);
 
   $('#editButton').click(() => {
     var id = $('#idInput').val();

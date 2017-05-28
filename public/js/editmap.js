@@ -2,7 +2,7 @@ $(document).ready(() => {
   var messageId = window.location.search.slice(4);
    console.log("window.location.search with slice: ", window.location.search.slice(4));
    console.log("here");
-  $.getJSON('http://localhost:3000/api/votes/' + window.location.search.slice(4))
+  $.getJSON('http://cap-backend.herokuapp.com/api/votes/' + window.location.search.slice(4))
   .done((results) => {
     console.log('here');
     console.log(results, 'line 8');
@@ -26,7 +26,7 @@ $(document).ready(() => {
     var options = {
       contentType: 'application/json',
       type: 'PATCH',
-      url: 'http://localhost:3000/api/votes/' + messageId,
+      url: 'http://cap-backend.herokuapp.com/api/votes/' + messageId,
       data: JSON.stringify({id, map_photo }),
     }
 
@@ -47,7 +47,7 @@ $(document).ready(() => {
     var options = {
       contentType: 'application/json',
       type: 'DELETE',
-      url: 'http://localhost:3000/api/votes/' + messageId,
+      url: 'http://cap-backend.herokuapp.com/api/votes/' + messageId,
       data: JSON.stringify({id, map_photo})
     }
 

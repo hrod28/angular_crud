@@ -27,7 +27,7 @@ $(document).ready(() => {
     var options = {
       contentType: 'application/json',
       type: 'PATCH',
-      url: 'http://localhost:3000/api/posts' + messageId,
+      url: 'http://cap-backend.herokuapp.com/api/posts' + messageId,
       data: JSON.stringify({id, title, description, picture_url}),
     }
 
@@ -50,7 +50,7 @@ $(document).ready(() => {
     var options = {
       contentType: 'application/json',
       type: 'DELETE',
-      url: 'http://localhost:3000/api/posts' + messageId,
+      url: 'http://cap-backend.herokuapp.com/api/posts' + messageId,
           data: JSON.stringify({id, title, description, picture_url}),
     }
 
