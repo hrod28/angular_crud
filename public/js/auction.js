@@ -2,7 +2,7 @@ $(document).ready(() => {
 
   $('#submitButton').click((e) => {
     console.log("CLICKED");
-    var id = $('#idInput').val();
+    var id = $('#id').val();
     var title = $('#title').val();
     var picture_url = $('#picture_url').val();
     var description = $('#description').val();
@@ -11,7 +11,7 @@ $(document).ready(() => {
     var options = {
       contentType: 'application/json',
       type: 'POST',
-      url: 'http://cap-backend.herokuapp.com/api/posts',
+      url: 'http://localhost:3000/api/posts',
       data: JSON.stringify({id, description, title, picture_url}),
     }
 
@@ -25,7 +25,7 @@ $(document).ready(() => {
       })
   });
 
-  $.getJSON('http://cap-backend.herokuapp.com/api/posts')
+  $.getJSON('http://localhost:3000/api/posts')
     .done((results) => {
       var $container = $('#auctionContainer');
       console.log("RESULTS: ", results);
@@ -43,9 +43,11 @@ $(document).ready(() => {
         var $eight = $('<h6>').text(' ');
         var $picture_url = $('<a>').attr({href: "/editauction.html?id=" + results[i].id}).text(results[i].picture_url);
         var $description = $('<a>').attr({href: "/editauction.html?id=" + results[i].id}).text(results[i].description);
+        var $id = $('<a>').attr({href: "/editauction.html?id=" + results[i].id}).text(results[i].id);
 
-
+        $container.append($id);
         $container.append($one);
+        $container.append($three);
         $container.append($title);
         $container.append($two);
 

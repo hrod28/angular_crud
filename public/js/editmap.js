@@ -2,7 +2,7 @@ $(document).ready(() => {
   var messageId = window.location.search.slice(4);
    console.log("window.location.search with slice: ", window.location.search.slice(4));
    console.log("here");
-  $.getJSON('http://cap-backend.herokuapp.com/api/votes/' + window.location.search.slice(4))
+  $.getJSON('http://localhost:3000/api/votes/' + window.location.search.slice(4))
   .done((results) => {
     console.log('here');
     console.log(results, 'line 8');
@@ -16,8 +16,9 @@ $(document).ready(() => {
     $('#mapContainer').text("Could not get messages");
   })
 
+
   $('#editButton').click(() => {
-    var id = $('#idInput').val();
+    var id = $('#id').val();
     var map_photo = $('#map_photo').val();
 
 
@@ -25,8 +26,8 @@ $(document).ready(() => {
     var options = {
       contentType: 'application/json',
       type: 'PATCH',
-      url: 'http://cap-backend.herokuapp.com/api/votes/' + messageId,
-      data: JSON.stringify({time, title,  description}),
+      url: 'http://localhost:3000/api/votes/' + messageId,
+      data: JSON.stringify({id, map_photo }),
     }
 
     $.ajax(options)
@@ -39,14 +40,14 @@ $(document).ready(() => {
       })
   });
   $('#deleteButton').click(() => {
-    var id = $('#idInput').val();
+    var id = $('#id').val();
     var map_photo = $('#map_photo').val();
 
 
     var options = {
       contentType: 'application/json',
       type: 'DELETE',
-      url: 'http://cap-backend.herokuapp.com/api/votes/' + messageId,
+      url: 'http://localhost:3000/api/votes/' + messageId,
       data: JSON.stringify({id, map_photo})
     }
 

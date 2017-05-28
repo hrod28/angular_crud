@@ -16,7 +16,7 @@ $(document).ready(() => {
       contentType: 'application/json',
       type: 'POST',
       url: 'http://cap-backend.herokuapp.com/api/brewers',
-      data: JSON.stringify({name, brewery, brewery_logo, featured_drink, description, serving_location, photo_url, brewery_url}),
+      data: JSON.stringify({id, name, brewery, brewery_logo, featured_drink, description, serving_location, photo_url, brewery_url}),
     }
 
     $.ajax(options)
@@ -39,6 +39,7 @@ $(document).ready(() => {
         var $name = $('<a>').attr({href: "/editbrewers.html?id=" + results[i].id}).text(results[i].name);
         var $one = $('<h6>').text('--********************-- ');
         var $two = $('<h6>').text(' ');
+        var $id = $('<a>').attr({href: "/editbrewers.html?id=" + results[i].id}).text(results[i].id);
         var $three = $('<h6>').text(' ');
         var $four = $('<h6>').text(' ');
         var $five = $('<h6>').text(' ');
@@ -53,6 +54,7 @@ $(document).ready(() => {
         var $photo_url = $('<a>').attr({href: "/editbrewers.html?id=" + results[i].id}).text(results[i].photo_url);
         var $brewery_url = $('<a>').attr({href: "/editbrewers.html?id=" + results[i].id}).text(results[i].brewery_url);
 
+        $container.append($id);
         $container.append($one);
         $container.append($name);
         $container.append($two);

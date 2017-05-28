@@ -2,15 +2,15 @@ $(document).ready(() => {
 
   $('#submitButton').click((e) => {
     console.log("CLICKED");
-    var id = $('#idInput').val();
+    var id = $('#id').val();
     var map_photo = $('#map_photo').val();
 
 
     var options = {
       contentType: 'application/json',
       type: 'POST',
-      url: 'http://cap-backend.herokuapp.com/api/votes',
-      data: JSON.stringify({map_photo, id})
+      url: 'http://localhost:3000/api/votes',
+      data: JSON.stringify({id, map_photo})
     }
 
     $.ajax(options)
@@ -23,7 +23,7 @@ $(document).ready(() => {
       })
   });
 
-  $.getJSON('http://cap-backend.herokuapp.com/api/votes')
+  $.getJSON('http://localhost:3000/api/votes')
     .done((results) => {
       var $container = $('#mapContainer');
       console.log("RESULTS: ", results);

@@ -6,7 +6,7 @@ $(document).ready(() => {
   .done((results) => {
     console.log(results);
     // var result = results[0];
-    $('#id').attr({value: results.id});
+    $('#idInput').attr({value: results.id});
     $('#name').attr({value: results.name});
     $('#brewery').attr({value: results.brewery});
     $('#brewery_logo').attr({value: results.brewery_logo});
@@ -38,7 +38,7 @@ $(document).ready(() => {
       contentType: 'application/json',
       type: 'PATCH',
       url: 'http://cap-backend.herokuapp.com/api/brewers/' + messageId,
-      data: JSON.stringify({name, brewery, brewery_logo, featured_drink, description, serving_location, photo_url, brewery_url}),
+      data: JSON.stringify({id, name, brewery, brewery_logo, featured_drink, description, serving_location, photo_url, brewery_url}),
     }
 
     $.ajax(options)
@@ -65,7 +65,7 @@ $(document).ready(() => {
       contentType: 'application/json',
       type: 'DELETE',
       url: 'http://cap-backend.herokuapp.com/api/brewers/' + messageId,
-          data: JSON.stringify({name, brewery, brewery_logo, featured_drink, description, serving_location, photo_url, brewery_url}),
+          data: JSON.stringify({id, name, brewery, brewery_logo, featured_drink, description, serving_location, photo_url, brewery_url}),
     }
 
     $.ajax(options)

@@ -2,15 +2,14 @@ $(document).ready(() => {
   var messageId = window.location.search.slice(4);
    console.log("window.location.search with slice: ", window.location.search.slice(4));
    console.log("here");
-  $.getJSON('http://cap-backend.herokuapp.com/api/comments/' + window.location.search.slice(4))
+  $.getJSON('http://localhost:3000/api/comments/' + window.location.search.slice(4))
   .done((results) => {
-    console.log('here');
-    console.log(results, 'line 8');
-    // var result = results[0];
-    $('#id').attr({value: results.id});
-    $('#time').attr({value: results.time});
-    $('#title').attr({value: results.title});
-    $('#description').attr({value: results.description});
+    console.log(results);
+
+    $('#id').attr({value: results[0].id});
+    $('#time').attr({value: results[0].time});
+    $('#title').attr({value: results[0].title});
+    $('#description').attr({value: results[0].description});
 
   })
   .fail(() => {
@@ -50,8 +49,8 @@ $(document).ready(() => {
     var options = {
       contentType: 'application/json',
       type: 'DELETE',
-      url: 'http://cap-backend.herokuapp.com/api/comments/' + messageId,
-      data: JSON.stringify({time, title,  description, id})
+      url: 'http://localhost:3000/api/comments/' + messageId,
+      data: JSON.stringify({id, time, title,  description})
     }
 
     $.ajax(options)

@@ -19,7 +19,7 @@ $(document).ready(() => {
 
   $('#editButton').click(() => {
     console.log("CLICKED");
-    var id = $('#idInput').val();
+    var id = $('#id').val();
     var title = $('#title').val();
     var description = $('#description').val();
     var picture_url = $('#picture_url').val();
@@ -27,7 +27,7 @@ $(document).ready(() => {
     var options = {
       contentType: 'application/json',
       type: 'PATCH',
-      url: 'http://cap-backend.herokuapp.com/api/posts/' + messageId,
+      url: 'http://localhost:3000/api/posts' + messageId,
       data: JSON.stringify({id, title, description, picture_url}),
     }
 
@@ -41,7 +41,7 @@ $(document).ready(() => {
       })
   });
   $('#deleteButton').click(() => {
-    var id = $('#idInput').val();
+    var id = $('#id').val();
     var title = $('#title').val();
     var description = $('#description').val();
     var picture_url = $('#picture_url').val();
@@ -50,7 +50,7 @@ $(document).ready(() => {
     var options = {
       contentType: 'application/json',
       type: 'DELETE',
-      url: 'http://cap-backend.herokuapp.com/api/posts/' + messageId,
+      url: 'http://localhost:3000/api/posts' + messageId,
           data: JSON.stringify({id, title, description, picture_url}),
     }
 
