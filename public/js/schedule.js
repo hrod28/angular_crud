@@ -35,18 +35,19 @@ $(document).ready(() => {
         var $title = $('<a>').attr({href: "/editschedule.html?id=" + results[i].id}).text(results[i].title);
         var $description = $('<a>').attr({href: "/editschedule.html?id=" + results[i].id}).text(results[i].description);
         var $one = $('<h6>').text('--********************-- START NEW RECORD HERE --**************************-- ');
-        var $two = $('<h6>').text(' ');
-        var $three = $('<h6>').text(' ');
+        var $two = $('<h6>').text(' time:');
+        var $three = $('<h6>').text('title ');
+        var $four = $('<h6>').text('description ');
 
 
 
         $container.append($one);
-        $container.append($one);
-        $container.append($time);
         $container.append($two);
+        $container.append($time);
+        $container.append($three);
 
         $container.append($title);
-        $container.append($three);
+        $container.append($four);
 
         $container.append($description);
         // console.log($description);

@@ -38,14 +38,15 @@ $(document).ready(() => {
         var $div = $('<div>').addClass('message');
         var $name = $('<a>').attr({href: "/editbrewers.html?id=" + results[i].id}).text(results[i].name);
         var $one = $('<h6>').text('--********************-- START NEW RECORD HERE --**************************-- ');
-        var $two = $('<h6>').text(' ');
+        var $two = $('<h6>').text('Brewer Name: ');
         var $id = $('<a>').attr({href: "/editbrewers.html?id=" + results[i].id}).text(results[i].id);
-        var $three = $('<h6>').text(' ');
-        var $four = $('<h6>').text(' ');
-        var $five = $('<h6>').text(' ');
-        var $six = $('<h6>').text(' ');
-        var $seven = $('<h6>').text(' ');
-        var $eight = $('<h6>').text(' ');
+        var $three = $('<h6>').text('Brewery ');
+        var $four = $('<h6>').text('URL of brewery logo: ');
+        var $five = $('<h6>').text('Featured drink name ');
+        var $six = $('<h6>').text('Description of drink ');
+        var $seven = $('<h6>').text('Google map address of Serving location: ');
+        var $eight = $('<h6>').text('URL of photo of either brewer or drink: ');
+        var $nine = $('<h6>').text('URL of either brewery website ');
         var $brewery = $('<a>').attr({href: "/editbrewers.html?id=" + results[i].id}).text(results[i].brewery);
         var $brewery_logo = $('<a>').attr({href: "/editbrewers.html?id=" + results[i].id}).text(results[i].brewery_logo);
         var $featured_drink = $('<a>').attr({href: "/editbrewers.html?id=" + results[i].id}).text(results[i].featured_drink);
@@ -56,8 +57,8 @@ $(document).ready(() => {
 
         $container.append($id);
         $container.append($one);
-        $container.append($name);
         $container.append($two);
+        $container.append($name);
 
         $container.append($three);
         $container.append($brewery);
@@ -71,7 +72,7 @@ $(document).ready(() => {
         $container.append($serving_location);
         $container.append($eight);
         $container.append($photo_url);
-        $container.append($eight);
+        $container.append($nine);
         $container.append($brewery_url);
 
       }

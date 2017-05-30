@@ -34,8 +34,10 @@ $(document).ready(() => {
         var $div = $('<div>').addClass('message');
         var $thanks_name = $('<a>').attr({href: "/editthanks.html?id=" + results[i].id}).text(results[i].thanks_name);
         var $one = $('<h6>').text('--********************-- START NEW RECORD HERE --**************************-- ');
-        var $two = $('<h6>').text(' ');
-        var $three = $('<h6>').text(' ');
+        var $two = $('<h6>').text(' description (ex. Event Sponsor)');
+        var $five = $('<h6>').text('name of person or business');
+        var $three = $('<h6>').text(' URL of photo of person or company logo:');
+        var $four = $('<h6>').text('URL for business website ');
 
         var $photo_url = $('<a>').attr({href: "/editthanks.html?id=" + results[i].id}).text(results[i].photo_url);
         var $description = $('<a>').attr({href: "/editthanks.html?id=" + results[i].id}).text(results[i].description);
@@ -43,13 +45,14 @@ $(document).ready(() => {
 
 
         $container.append($one);
+        $container.append($five);
         $container.append($thanks_name);
         $container.append($two);
 
         $container.append($description);
         $container.append($three);
         $container.append($photo_url);
-        $container.append($three);
+        $container.append($four);
         $container.append($business_link);
         console.log('#thanksContainer');
 

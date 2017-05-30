@@ -50,7 +50,7 @@ $(document).ready(() => {
     var options = {
       contentType: 'application/json',
       type: 'DELETE',
-      url: 'http://cap-backend.herokuapp.com/api/posts' + messageId,
+      url: 'http://cap-backend.herokuapp.com/api/posts/' + messageId,
           data: JSON.stringify({id, title, description, picture_url}),
     }
 

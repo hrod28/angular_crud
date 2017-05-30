@@ -3,6 +3,7 @@ $(document).ready(() => {
   $('#submitButton').click((e) => {
     console.log("CLICKED");
     var id = $('#idInput').val();
+    var plate_name = $('#plate_name').val();
     var prepared_by = $('#prepared_by').val();
     var description = $('#description').val();
     var ingredients = $('#ingredients').val();
@@ -18,13 +19,13 @@ $(document).ready(() => {
       contentType: 'application/json',
       type: 'POST',
       url: 'http://cap-backend.herokuapp.com/api/dishes',
-      data: JSON.stringify({prepared_by, description, ingredients, photo_url, paired_with, paired_logo, paired_with_desc, servedfrom, servedfrom_logo, location_url}),
+      data: JSON.stringify({plate_name, prepared_by, description, ingredients, photo_url, paired_with, paired_logo, paired_with_desc, servedfrom, servedfrom_logo, location_url}),
     }
 
     $.ajax(options)
       .done(() => {
         console.log("DONE");
-        window.location.href = '/';
+        window.location.href = '/dishes.html';
       })
       .fail(($xhr) => {
         console.log($xhr);
@@ -40,13 +41,17 @@ $(document).ready(() => {
         var $div = $('<div>').addClass('message');
         var $plate_name = $('<a>').attr({href: "/editdishes.html?id=" + results[i].id}).text(results[i].plate_name);
         var $one = $('<h6>').text('--********************-- START NEW RECORD HERE --**************************-- ');
-        var $two = $('<h6>').text(' ');
-        var $three = $('<h6>').text(' ');
-        var $four = $('<h6>').text(' ');
-        var $five = $('<h6>').text(' ');
-        var $six = $('<h6>').text(' ');
-        var $seven = $('<h6>').text(' ');
-        var $eight = $('<h6>').text(' ');
+        var $two = $('<h6>').text(' plate name:');
+        var $three = $('<h6>').text(' prepared by (chef name)');
+        var $four = $('<h6>').text(' description of plate');
+        var $five = $('<h6>').text('ingredients: ');
+        var $six = $('<h6>').text('URL of photo of dish ');
+        var $seven = $('<h6>').text('name of pairing ');
+        var $eight = $('<h6>').text('URL of photo of pairing logo ');
+        var $nine = $('<h6>').text('description of pairing');
+        var $ten = $('<h6>').text('serving location');
+        var $eleven = $('<h6>').text('URL of photo of serving location logo ');
+        var $twelve = $('<h6>').text('Google maps address of serving_location ');
         var $prepared_by = $('<a>').attr({href: "/editdishes.html?id=" + results[i].id}).text(results[i].prepared_by);
         var $description = $('<a>').attr({href: "/editdishes.html?id=" + results[i].id}).text(results[i].description);
         var $ingredients = $('<a>').attr({href: "/editdishes.html?id=" + results[i].id}).text(results[i].ingredients);
@@ -60,8 +65,8 @@ $(document).ready(() => {
 
 
         $container.append($one);
-        $container.append($plate_name);
         $container.append($two);
+        $container.append($plate_name);
 
         $container.append($three);
         $container.append($prepared_by);
@@ -75,13 +80,13 @@ $(document).ready(() => {
         $container.append($paired_with);
         $container.append($eight);
         $container.append($paired_logo);
-        $container.append($eight);
+        $container.append($nine);
         $container.append($paired_with_desc);
-        $container.append($eight);
+        $container.append($ten);
         $container.append($servedfrom);
-        $container.append($eight);
+        $container.append($eleven);
         $container.append($servedfrom_logo);
-        $container.append($eight);
+        $container.append($twelve);
         $container.append($location_url);
       }
     })

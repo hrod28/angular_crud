@@ -26,8 +26,8 @@ $(document).ready(() => {
 
   $('#editButton').click(() => {
     var id = $('#idInput').val();
-    var prepared_by = $('#prepared_by').val();
     var plate_name = $('#plate_name').val();
+    var prepared_by = $('#prepared_by').val();
     var description = $('#description').val();
     var ingredients = $('#ingredients').val();
     var photo_url = $('#photo_url').val();
@@ -42,7 +42,7 @@ $(document).ready(() => {
       contentType: 'application/json',
       type: 'PATCH',
       url: 'http://cap-backend.herokuapp.com/api/dishes/' + messageId,
-      data: JSON.stringify({plate_name, prepared_by, description, ingredients, photo_url, paired_with, paired_logo, paired_with_desc, servedfrom, servedfrom_logo, location_url}),
+      data: JSON.stringify({id, plate_name, prepared_by, description, ingredients, photo_url, paired_with, paired_logo, paired_with_desc, servedfrom, servedfrom_logo, location_url}),
     }
 
     $.ajax(options)
@@ -72,7 +72,7 @@ $(document).ready(() => {
       contentType: 'application/json',
       type: 'DELETE',
       url: 'http://cap-backend.herokuapp.com/api/dishes/' + messageId,
-      data: ({plate_name, prepared_by, description, ingredients, photo_url, paired_with, paired_logo, paired_with_desc, servedfrom, servedfrom_logo, location_url})
+      data: ({ plate_name, prepared_by, description, ingredients, photo_url, paired_with, paired_logo, paired_with_desc, servedfrom, servedfrom_logo, location_url})
     }
 
     $.ajax(options)
