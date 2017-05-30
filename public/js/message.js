@@ -12,6 +12,7 @@ $(document).ready(() => {
     $('#paired_with').attr({value: results.paired_with});
     $('#paired_logo').attr({value: results.paired_logo});
     $('#serving_location').attr({value: results.serving_location});
+    $('#serving_photo').attr({value: results.serving_photo});
     $('#photo_url').attr({value: results.photo_url});
     $('#restaurant_url').attr({value: results.restaurant_url});
 
@@ -19,7 +20,6 @@ $(document).ready(() => {
   .fail(() => {
     $('#messageContainer').text("Could not get messages");
   })
-  console.log(results.restaurant_logo);
 
   $('#editButton').click(() => {
     var id = $('#idInput').val();
@@ -29,6 +29,7 @@ $(document).ready(() => {
     var paired_with = $('#paired_with').val();
     var paired_logo = $('#paired_logo').val();
     var serving_location = $('#serving_location').val();
+    var serving_photo = $('#serving_photo').val();
     var photo_url = $('#photo_url').val();
     var restaurant_url = $('#restaurant_url').val();
 
@@ -36,7 +37,7 @@ $(document).ready(() => {
       contentType: 'application/json',
       type: 'PATCH',
       url: 'http://cap-backend.herokuapp.com/api/chefs/' + messageId,
-      data: JSON.stringify({name, restaurant, restaurant_logo, paired_with, paired_logo, serving_location, photo_url, restaurant_url}),
+      data: JSON.stringify({name, restaurant, restaurant_logo, paired_with, paired_logo, serving_location, serving_photo, photo_url, restaurant_url}),
     }
 
     $.ajax(options)
@@ -55,6 +56,7 @@ $(document).ready(() => {
     var restaurant_logo = $('#restaurant_logo').val();
     var paired_with = $('#paired_with').val();
     var serving_location = $('#serving_location').val();
+    var serving_photo = $('#serving_photo').val();
     var photo_url = $('#photo_url').val();
     var restaurant_url = $('#restaurant_url').val();
 
@@ -62,7 +64,7 @@ $(document).ready(() => {
       contentType: 'application/json',
       type: 'DELETE',
       url: 'http://cap-backend.herokuapp.com/api/chefs/' + messageId,
-      data: JSON.stringify({name, restaurant, restaurant_logo, paired_with, paired_logo, serving_location, photo_url, restaurant_url})
+      data: JSON.stringify({name, restaurant, serving_photo, restaurant_logo, paired_with, paired_logo, serving_location, photo_url, restaurant_url})
     }
 
     $.ajax(options)

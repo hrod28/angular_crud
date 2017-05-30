@@ -5,10 +5,10 @@ $(document).ready(() => {
   $.getJSON('http://cap-backend.herokuapp.com/api/votes/' + window.location.search.slice(4))
   .done((results) => {
     console.log('here');
-    console.log(results, 'line 8');
+    console.log(results[0], 'line 8');
     // var result = results[0];
-    $('#id').attr({value: results.id});
-    $('#map_photo').attr({value: results.map_photo});
+    $('#id').attr({value: results[0].id});
+    $('#map_photo').attr({value: results[0].map_photo});
 
 
   })
