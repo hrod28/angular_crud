@@ -10,7 +10,7 @@ $(document).ready(() => {
     var options = {
       contentType: 'application/json',
       type: 'POST',
-      url: 'lo\\',
+      url: 'http://cap-backend.herokuapp.com/api/comments',
       data: JSON.stringify({id, time, title, description})
     }
 
