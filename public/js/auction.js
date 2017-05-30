@@ -33,10 +33,10 @@ $(document).ready(() => {
         // console.log(results[i]);
         var $div = $('<div>').addClass('message');
         var $title = $('<a>').attr({href: "/editauction.html?id=" + results[i].id}).text(results[i].title);
-        var $one = $('<h6>').text('--********************-- ');
-        var $two = $('<h6>').text(' ');
-        var $three = $('<h6>').text(' ');
-        var $four = $('<h6>').text(' ');
+        var $one = $('<h6>').text('--********************-- START NEW RECORD HERE --**************************-- ');
+        var $two = $('<h6>').text('description of item ');
+        var $three = $('<h6>').text('title of item: ');
+        var $four = $('<h6>').text('URL location of photo of item ');
         var $five = $('<h6>').text(' ');
         var $six = $('<h6>').text(' ');
         var $seven = $('<h6>').text(' ');
@@ -51,7 +51,7 @@ $(document).ready(() => {
         $container.append($title);
         $container.append($two);
 
-        $container.append($three);
+        // $container.append($three);
         $container.append($description);
         $container.append($four);
         $container.append($picture_url);

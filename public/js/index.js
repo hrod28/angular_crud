@@ -7,8 +7,9 @@ $(document).ready(() => {
     var restaurant = $('#messageInput').val();
     var restaurant_logo = $('#restaurant_logo').val();
     var paired_with = $('#paired_with').val();
+    var paired_logo = $('#paired_logo').val();
     var serving_location = $('#serving_location').val();
-    var serving_photo = $('#serving_photo').val();
+    // var serving_ = $('#serving_photo').val();
     var serving_photo = $('#serving_photo').val();
     var photo_url = $('#photo_url').val();
     var restaurant_url = $('#restaurant_url').val();
@@ -38,7 +39,7 @@ $(document).ready(() => {
         // console.log(results[i]);
         var $div = $('<div>').addClass('message');
         var $name = $('<a>').attr({href: "/chefs.html?id=" + results[i].id}).text(results[i].name);
-        var $one = $('<h6>').text('--********************--  New record   Name:');
+        var $one = $('<h6>').text('--********************-- START NEW RECORD HERE --**************************-- ');
         var $two = $('<h6>').text('restaurant: ');
         var $three = $('<h6>').text('url of restaurant logo: ');
         var $four = $('<h6>').text('paired_with ');

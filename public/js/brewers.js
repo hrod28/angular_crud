@@ -37,7 +37,7 @@ $(document).ready(() => {
         // console.log(results[i]);
         var $div = $('<div>').addClass('message');
         var $name = $('<a>').attr({href: "/editbrewers.html?id=" + results[i].id}).text(results[i].name);
-        var $one = $('<h6>').text('--********************-- ');
+        var $one = $('<h6>').text('--********************-- START NEW RECORD HERE --**************************-- ');
         var $two = $('<h6>').text(' ');
         var $id = $('<a>').attr({href: "/editbrewers.html?id=" + results[i].id}).text(results[i].id);
         var $three = $('<h6>').text(' ');

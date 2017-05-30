@@ -31,7 +31,7 @@ $(document).ready(() => {
         // console.log(results[i]);
         var $div = $('<div>').addClass('message');
         var $map_photo = $('<a>').attr({href: "/editmap.html?id=" + results[i].id}).text(results[i].map_photo);
-        var $one = $('<h6>').text('--********************-- ');
+        var $one = $('<h6>').text('--********************-- START NEW RECORD HERE --**************************-- ');  
         var $two = $('<h6>').text(' ');
 
 

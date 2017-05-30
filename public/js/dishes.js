@@ -39,7 +39,7 @@ $(document).ready(() => {
         // console.log(results[i]);
         var $div = $('<div>').addClass('message');
         var $plate_name = $('<a>').attr({href: "/editdishes.html?id=" + results[i].id}).text(results[i].plate_name);
-        var $one = $('<h6>').text('--********************-- ');
+        var $one = $('<h6>').text('--********************-- START NEW RECORD HERE --**************************-- ');
         var $two = $('<h6>').text(' ');
         var $three = $('<h6>').text(' ');
         var $four = $('<h6>').text(' ');

@@ -33,7 +33,7 @@ $(document).ready(() => {
         // console.log(results[i]);
         var $div = $('<div>').addClass('message');
         var $thanks_name = $('<a>').attr({href: "/editthanks.html?id=" + results[i].id}).text(results[i].thanks_name);
-        var $one = $('<h6>').text('--********************-- ');
+        var $one = $('<h6>').text('--********************-- START NEW RECORD HERE --**************************-- ');
         var $two = $('<h6>').text(' ');
         var $three = $('<h6>').text(' ');
 

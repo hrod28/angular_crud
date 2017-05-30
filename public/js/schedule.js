@@ -34,7 +34,7 @@ $(document).ready(() => {
         var $time = $('<a>').attr({href: "/editschedule.html?id=" + results[i].id}).text(results[i].time);
         var $title = $('<a>').attr({href: "/editschedule.html?id=" + results[i].id}).text(results[i].title);
         var $description = $('<a>').attr({href: "/editschedule.html?id=" + results[i].id}).text(results[i].description);
-        var $one = $('<h6>').text('--********************-- start new record -***************************-');
+        var $one = $('<h6>').text('--********************-- START NEW RECORD HERE --**************************-- ');
         var $two = $('<h6>').text(' ');
         var $three = $('<h6>').text(' ');
 
