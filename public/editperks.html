@@ -7,17 +7,8 @@
   src="https://code.jquery.com/jquery-3.1.1.min.js"
   integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
   crossorigin="anonymous"></script>
-  <!-- <script type="text/html" src="schedule.html"></script> -->
-  <!-- <script type="text/html" src="brewers.html"></script>
-  <script type="text/html" src="dishes.html"></script>
-  <script type="text/html" src="map.html"></script>
-  <script type="text/html" src="auction.html"></script>
-  <script type="text/html" src="thanks.html"></script>
-  <script type="text/html" src="users.html"></script>
-  <script type="text/html" src="chefs.html"></script>
-  <script type="text/html" src="index.html"></script> -->
-  <!-- <script type="text/javascript" src="js/map.js"></script> -->
-  <script type="text/javascript" src="js/editmap.js"></script>
+  <script type="text/javascript" src="js/editperks.js"></script>
+
 </head>
 <body>
 
@@ -28,24 +19,40 @@
   <a href="/thanks.html">thanks<a/> |||||
   <a href="/users.html">users<a/> |||||
   <a href="/dishes.html">dishes<a/> |||||
-  <a href="/index.html">chefs<a/>|||||
+  <a href="/index.html">chefs<a/>||||||||||
   <a href="/perks.html">perks<a/>|||||
 
-  <h1>Edit, Delete Map records</h1>
+
+  <h1>Edit, Delete perks records</h1>
   <form action="POST">
     <label for="id">ID</label>
     <input id="id" type="text" name="id">
     <br>
     <br>
-    <label for="map_photo">map_photo URL</label>
+    <label for="time">time</label>
     <br>
-    <input id="map_photo" type="text" name="map_photo">
+    <input id="time" type="text" name="time">
     <br>
     <br>
     <!-- (actually reastaurant) -->
+    <label for="title">title </label>
+    <br>
+    <input id="title" type="text" name="title">
+    <br>
+    <br>
+    <label for="description">description</label>
+    <br>
+    <input id="description" type="text" name="description">
+    <br>
+    <label for="picture_url">picture_url</label>
+    <br>
+    <input id="picture_url" type="text" name="picture_url">
+    <br>
+    <br>
+    <br>
+    <br>
 
-    <br>
-    <br>
+
     <button id="editButton" type="button" name="button">EDIT</button>
     <br>
     <br>
